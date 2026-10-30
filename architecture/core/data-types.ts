@@ -2,7 +2,7 @@ export interface EntityDefinition<DB extends string, Table extends string> {
     readonly name: string;
     readonly database: DB;
     readonly table: Table;
-    readonly fields: readonly string[];
+    readonly fields: Record<string, unknown>;
 }
 
 export interface DataFlor<Entity extends string, Service extends string> {
