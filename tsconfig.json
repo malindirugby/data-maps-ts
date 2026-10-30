@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": ".",
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["projects/*"],
+      "@core/*": ["architecture/core/*"],
+      "@system/*": ["system/*"]
+    },
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["projects/**/*.ts", "architecture/**/*.ts", "system/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
