@@ -3,17 +3,24 @@
     "target": "ES2022",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "outDir": "dist",
     "rootDir": ".",
     "ignoreDeprecations": "6.0",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["projects/*"],
-      "@core/*": ["architecture/core/*"],
-      "@system/*": ["system/*"]
-    },
-    "strict": true,
-    "esModuleInterop": true
+      "@/*": ["src/*"],
+      "@core/*": ["src/core/*"],
+      "@domains/*": ["src/domains/*"],
+      "@registry/*": ["src/registry/*"],
+      "@policies/*": ["src/policies/*"]
+    }
   },
-  "include": ["projects/**/*.ts", "architecture/**/*.ts", "system/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules"]
 }
