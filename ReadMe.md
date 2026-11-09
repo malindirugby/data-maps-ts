@@ -1,3 +1,24 @@
-# Data Maps
+# Data Map
 
-This is project centered on representing and working with connected data using typescript (types) for mapping and keeping data organized. It shows system architects a visual definition of relationships between keys and values and ideas on how to use those relationships in an application.
+This repository is a TypeScript data definition package for describing entities, attributes, relationships, validation, and usage policy independently of any interface layer.
+
+The package focuses on the canonical meaning of data rather than on collection experience or presentation details.
+
+## Core model
+
+- Entity definitions with versioned metadata
+- Typed attributes and validation constraints
+- Relationship definitions between domains
+- Policy layers for validation, classification, and usage
+- Registry utilities to expose available definitions
+
+## Example
+
+```ts
+import { PersonDefinition } from "./src/domains/people";
+
+console.log(PersonDefinition.name);
+console.log(PersonDefinition.attributes.email.label);
+```
+
+This package is intentionally independent of UI or form rendering concerns.
