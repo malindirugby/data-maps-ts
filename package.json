@@ -1,5 +1,5 @@
 {
-  "name": "data-map",
+  "name": "data-maps-ts",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -12,5 +12,12 @@
     "typescript": "^5.6.3",
     "vitest": "^2.1.8",
     "zod": "^3.23.8"
+  },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/malindirugby/data-maps-ts.git"
+  },
+    "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
