@@ -1,4 +1,4 @@
-import type { PrimitiveDefinition } from "@core/metadata/attribute.ts";
+import type { PrimitiveDefinition } from "../../core/metadata/attribute.js";
 
 /** Provides the default metadata for boolean values. */
 export const booleanPrimitive = {

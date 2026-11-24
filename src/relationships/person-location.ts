@@ -1,4 +1,4 @@
-import { defineRelationship } from "@core/metadata/relationship.ts";
+import { defineRelationship } from "../core/metadata/relationship.js";
 
 /** Models the many-to-many association between people and locations. */
 export const personLocationRelationship = defineRelationship({

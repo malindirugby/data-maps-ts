@@ -1,4 +1,4 @@
-import type { PrimitiveDefinition } from "@core/metadata/attribute.ts";
+import type { PrimitiveDefinition } from "../../core/metadata/attribute.js";
 
 /** Provides the default metadata and non-negative constraint for numbers. */
 export const numberPrimitive = {
