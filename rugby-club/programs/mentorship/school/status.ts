@@ -1,0 +1,1 @@
+export type RegistrationStatus = 'draft' | 'pending_approval' | 'approved' | 'rejected' | 'active' | 'completed' | 'cancelled';
