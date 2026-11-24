@@ -1,24 +1,41 @@
-# Data Map
+# data-maps-ts
 
-This repository is a TypeScript data definition package for describing entities, attributes, relationships, validation, and usage policy independently of any interface layer.
+A TypeScript package for describing canonical data entities, attributes, relationships, validation, classification, and usage policies independently of any interface layer.
 
-The package focuses on the canonical meaning of data rather than on collection experience or presentation details.
+## Install from GitHub Packages
 
-## Core model
+Configure the `@malindirugby` scope to use GitHub Packages in the consuming application's `.npmrc`:
 
-- Entity definitions with versioned metadata
-- Typed attributes and validation constraints
-- Relationship definitions between domains
-- Policy layers for validation, classification, and usage
-- Registry utilities to expose available definitions
+```ini
+@malindirugby:registry=https://npm.pkg.github.com
+```
 
-## Example
+Authenticate to GitHub Packages with a token that has permission to read this package. Keep credentials in the user's or CI environment's npm configuration; never commit a token.
+
+Then install:
+
+```bash
+npm install @malindirugby/data-maps-ts
+```
+
+## Usage
 
 ```ts
-import { PersonDefinition } from "./src/domains/people";
+import { PersonDefinition } from "@malindirugby/data-maps-ts";
 
 console.log(PersonDefinition.name);
 console.log(PersonDefinition.attributes.email.label);
 ```
 
-This package is intentionally independent of UI or form rendering concerns.
+## Development
+
+Requires Node.js 20 or newer.
+
+```bash
+npm ci
+npm run check
+npm test
+npm run build
+```
+
+The package is published to GitHub Packages only (`https://npm.pkg.github.com`). It is not configured for the public npm registry.
