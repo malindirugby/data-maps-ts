@@ -1,0 +1,2 @@
+/* office positions */
+export type Position = 'President' | 'Vice President' | 'Office Assistant' | 'Secretary' | 'Manager' | 'Analyst' | 'Administrator' | 'Social Media Manager' | 'Event Coordinator' | 'Fundraising Coordinator' | 'Marketing Coordinator' | 'Community Outreach Coordinator' | 'Sponsorship Coordinator' | 'Volunteer Coordinator' | 'Operations Manager' | 'Finance Manager' | 'Human Resources Manager' | 'IT Manager' | 'Legal Advisor' | 'Medical Officer';

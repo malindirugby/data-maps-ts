@@ -1,0 +1,1 @@
+export type Position = 'Coach' | 'Assistant Coach' | 'Captain' | 'Vice Captain' | 'Player' | 'Substitute' | 'Medical Staff' | 'Physiotherapist' | 'Trainer' | 'Analyst' | 'Scout' | 'Team Manager' | 'Equipment Manager' | 'Nutritionist' | 'Strength and Conditioning Coach' | 'Video Analyst' | 'Performance Analyst' | 'Sports Psychologist';

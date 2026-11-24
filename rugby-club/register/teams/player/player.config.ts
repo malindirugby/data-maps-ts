@@ -1,0 +1,1 @@
+// no player configs since teams can already return as players as an array
