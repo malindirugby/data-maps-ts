@@ -1,0 +1,2 @@
+/* Defines the possible countries for a rugby player */
+export type Country = 'Kenya' | 'Uganda' | 'Tanzania' | 'Ethiopia' | 'Rwanda' | 'Burundi' | 'South Africa' | 'New Zealand' | 'Australia' | 'England' | 'France' | 'Ireland' | 'Scotland' | 'Wales' | 'Argentina' | 'Fiji' | 'Samoa' | 'Tonga';
