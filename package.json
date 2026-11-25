@@ -1,7 +1,7 @@
 {
   "name": "@malindirugby/data-maps-ts",
   "version": "0.0.1",
-  "description": "canoncial typescrip data definitions for entities, attributes, relationships, validation and usage policies",
+  "description": "canoncial typescript data definitions for entities, attributes, relationships, validation and usage policies",
   "type": "module",
   "repository": {
     "type": "git",
