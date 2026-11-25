@@ -29,11 +29,11 @@
     "prepack": "npm run build"
   },
   "dependencies": {
-    "zod": "^3.23.8"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "typescript": "^7.0.2",
-    "vitest": "^2.1.8"    
+    "vitest": "^5.1.2"
   },
   "engines": {
     "node": ">=20"
