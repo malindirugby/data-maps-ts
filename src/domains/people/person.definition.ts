@@ -1,5 +1,5 @@
-import { defineEntity } from "@core/metadata/entity.ts";
-import { personAttributes } from "./person.types.ts";
+import { defineEntity } from "../../core/metadata/entity.js";
+import { personAttributes } from "./person.types.js";
 
 /** Combines person metadata and attributes into an entity definition. */
 export const PersonDefinition = defineEntity({

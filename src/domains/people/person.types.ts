@@ -1,4 +1,4 @@
-import type { AttributeDefinition } from "@core/metadata/attribute.ts";
+import type { AttributeDefinition } from "../../core/metadata/attribute.js";
 
 /** Declares the metadata and validation rules for person attributes. */
 export const personAttributes = {

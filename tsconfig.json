@@ -8,18 +8,11 @@
     "skipLibCheck": true,
     "declaration": true,
     "declarationMap": true,
+    "sourceMap": true,
     "outDir": "dist",
-    "rootDir": ".",
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
-    "paths": {
-      "@/*": ["src/*"],
-      "@core/*": ["src/core/*"],
-      "@domains/*": ["src/domains/*"],
-      "@registry/*": ["src/registry/*"],
-      "@policies/*": ["src/policies/*"]
-    }
+    "rootDir": "src",
+    "noEmit": false
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["dist", "node_modules"]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["dist", "node_modules", "tests"]
 }

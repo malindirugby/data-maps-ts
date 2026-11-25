@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - "worker/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check
+        run: npm run check
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build package
+        run: npm run build
+
+      - name: Pack package
+        run: npm pack --pack-destination "$RUNNER_TEMP"
+
+      - name: Verify package from a separate consumer project
+        working-directory: ${{ runner.temp }}
+        run: |
+          mkdir consumer-smoke-test
+          cd consumer-smoke-test
+          npm init -y
+          PACKAGE_TARBALL=$(find "$RUNNER_TEMP" -maxdepth 1 -name "*.tgz" -print -quit)
+          test -n "$PACKAGE_TARBALL"
+          npm install "$PACKAGE_TARBALL"
+          node --input-type=module -e "import { PersonDefinition } from '@malindirugby/data-maps-ts'; if (PersonDefinition.id !== 'person') process.exit(1); console.log('Consumer import succeeded');"

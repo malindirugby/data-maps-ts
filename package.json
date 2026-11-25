@@ -1,23 +1,41 @@
 {
-  "name": "data-maps-ts",
+  "name": "@malindirugby/data-maps-ts",
   "version": "0.0.1",
-  "private": true,
+  "description": "canoncial typescrip data definitions for entities, attributes, relationships, validation and usage policies",
   "type": "module",
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "check": "tsc --noEmit -p tsconfig.json",
-    "test": "vitest run"
-  },
-  "devDependencies": {
-    "typescript": "^7.0.2",
-    "vitest": "^2.1.8",
-    "zod": "^3.23.8"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/malindirugby/data-maps-ts.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.t",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "clean": "node --input-type=module -e \"import {rmSync} from 'node:fs'; rmSync('dist', {recursive: true, force: true })\"",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.2"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

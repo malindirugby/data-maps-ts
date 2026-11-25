@@ -1,7 +1,7 @@
-import { PersonDefinition } from "@domains/people/person.definition.ts";
-import { organizationDefinition } from "@domains/organizations/index.ts";
-import { locationDefinition } from "@domains/locations/index.ts";
-import { employmentDefinition } from "@domains/employment/index.ts";
+import { PersonDefinition } from "../domains/people/person.definition.js";
+import { organizationDefinition } from "../domains/organizations/index.js";
+import { locationDefinition } from "../domains/locations/index.js";
+import { employmentDefinition } from "../domains/employment/index.js";
 
 /** Provides a central lookup table for all registered entity definitions. */
 export const dataMapRegistry = {

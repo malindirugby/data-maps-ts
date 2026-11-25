@@ -1,5 +1,5 @@
 import type { AttributeDefinition } from "./attribute.ts";
-import type { RelationshipDefinition } from "./relationship.ts";
+import type { RelationshipDefinition } from "./relationship.js";
 
 /** Describes an entity and the attributes and relationships it exposes. */
 export interface EntityDefinition<
